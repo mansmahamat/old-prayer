@@ -1,13 +1,39 @@
 {
   "expo": {
     "scheme": "acme",
+    "splash": {
+      "image": "./assets/splash.png"
+    },
     "web": {
       "bundler": "metro"
     },
     "plugins": [
-      "expo-router"
+      "expo-router",
+      [
+        "expo-location",
+        {
+          "locationAlwaysAndWhenInUsePermission": "Allow $(PRODUCT_NAME) to use your location."
+        }
+      ],
+      [
+        "expo-notifications",
+        {
+          "icon": "./assets/splash.png",
+          "color": "#30a46cf",
+          "sounds": ["./assets/a8.wav"]
+        }
+      ]
     ],
     "name": "prayer",
-    "slug": "prayer"
+    "slug": "prayer-app-new",
+    "extra": {
+      "router": {
+        "origin": false
+      },
+      "eas": {
+        "projectId": "9cba4f70-b7d4-4a38-afa4-9c9294a7258b"
+      }
+    },
+    "owner": "mansdesmez"
   }
 }
